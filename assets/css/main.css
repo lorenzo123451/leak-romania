@@ -1,0 +1,119 @@
+body {
+    background-color: #09090c;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+a,
+p,
+h1,
+h2 {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;;
+}
+.etercontainer {
+    display: flex;
+}
+.elytext {
+    padding: 5rem;
+    margin: 7rem 0;
+}
+.elytxd h1 {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    color: #ababab;
+}
+.elytxd h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.elytxd p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ababab;
+    width: 100%;
+}
+.elybtns button {
+    background-color: hsla(0,0%,100%,.075);
+    border-radius: 8px;
+    padding: 15px 30px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+.elybtns .discord {
+    background-color: hsla(235, 86%, 65%) !important;
+}
+.elybtns button:hover {
+    box-shadow: 0 0 100px 5px hsla(0,0%,100%,.075);
+    transform: translateY(-5px);
+    transition: all .3s;
+}
+.elybtns .discord:hover {
+    box-shadow: 0 0 100px 5px hsla(235, 86%, 65%, .075);
+    transform: translateY(-5px);
+    transition: all .3s;
+}
+.copyright {
+    margin-top: 20px;
+}
+.copyright a {
+    color: rgba(255, 255, 255, 0.2) !important; 
+    text-transform: uppercase;
+    font-size: 0.65rem;
+}
+.ely {
+    color: #909CE7 !important;
+    text-shadow: 0px 0px 100px #909ce7;
+}
+.character {
+    margin: 5rem 0;
+}
+.character img {
+    width: 33rem;
+}
+.sep {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,rgba(144, 156, 231,.075),transparent);
+    margin-bottom: 20px;
+}
+@media only screen and (max-width: 2000px) {
+    .elytext {
+        margin: 14rem 0;
+    }
+    .character {
+        margin: 10rem 0;
+    }
+    .character img {
+        width: 40rem; 
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .elytext {
+        margin: 7rem 0;
+    }
+    .character {
+        margin: 5rem 0;
+    }
+    .character img {
+        width: 33rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .character {
+        display: none;
+    }
+}
