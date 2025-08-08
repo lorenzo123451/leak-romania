@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Purple Bio</title>
+  <meta name="description" content="Link in bio modern, temă mov." />
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="config.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- SVG sprite icons -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 .002 6.002A3 3 0 0 0 12 9zm5.5-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></symbol>
+    <symbol id="icon-tiktok" viewBox="0 0 24 24"><path fill="currentColor" d="M14.5 3c.7 2.5 2.6 4.3 5 4.7v3.2c-1.9-.1-3.6-.8-5-1.9v6.6c0 3.6-2.6 6.4-6 6.4S2 19.2 2 15.6s2.8-6.5 6.2-6.5c.6 0 1.2.1 1.8.3v3.4c-.5-.2-1.1-.3-1.7-.3-1.5 0-2.7 1.3-2.7 3s1.2 3 2.7 3 2.7-1.3 2.7-3V3h3.5z"/></symbol>
+    <symbol id="icon-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23 7.5c0-1.7-1.3-3-3-3H4c-1.7 0-3 1.3-3 3v9c0 1.7 1.3 3 3 3h16c1.7 0 3-1.3 3-3v-9zM10 9.7l6 3.3-6 3.3V9.7z"/></symbol>
+    <symbol id="icon-twitter" viewBox="0 0 24 24"><path fill="currentColor" d="M20.9 7.5c.9-.6 1.6-1.4 2.1-2.4-.9.5-1.8.9-2.8 1 1.1-.7 1.6-1.5 2-2.7-1 .6-2 .9-3.1 1.1C18 3.6 16.7 3 15.3 3c-2.7 0-4.8 2.5-4.2 5.1C7.6 8 4.7 6.4 2.7 3.9c-1.2 2.2-.3 4.7 1.4 6.1-.8 0-1.6-.2-2.2-.6 0 2.1 1.5 3.9 3.5 4.4-.7.2-1.6.3-2.2.1.6 1.9 2.3 3.2 4.3 3.2C6 18.4 3.8 19 1.5 18.7c2 1.3 4.3 2 6.8 2 8.2 0 12.9-6.9 12.6-13.2z"/></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.9 1.5 1.2 2 3.1 1.4 3.8 1.1.1-.9.5-1.4.8-1.7-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.5 1.3-3.3-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.8 11.8 0 0 1 6.2 0C18 5.7 19 6 19 6c.6 1.7.2 3 .1 3.3.8.8 1.3 2 1.3 3.3 0 4.6-2.8 5.6-5.4 5.9.5.4.9 1.1.9 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.4l-10 6.3L2 6.4V6zm0 3.2V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9.2l-9.4 6a2 2 0 0 1-2.2 0L2 9.2z"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm7.9 9h-3.2a13.8 13.8 0 0 0-1.2-5 8 8 0 0 1 4.4 5zM12 4c.9 1.5 1.8 3.4 2.1 6H9.9C10.2 7.4 11.1 5.5 12 4zM4.1 11a8 8 0 0 1 4.4-5 13.8 13.8 0 0 0-1.2 5H4.1zm0 2h3.2c.2 1.8.7 3.5 1.2 5a8 8 0 0 1-4.4-5zm7.9 7c-.9-1.5-1.8-3.4-2.1-5.9h4.2C13.8 16.6 12.9 18.5 12 20zm3.9-2c.5-1.5 1-3.2 1.2-5H20a8 8 0 0 1-4.1 5z"/></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path fill="currentColor" d="M14 3h7v7h-2V6.4l-6.6 6.6-1.4-1.4L17.6 5H14V3zM5 5h7v2H7v10h10v-5h2v7H5V5z"/></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><path fill="currentColor" d="M8 8V5a2 2 0 0 1 2-2h7l5 5v9a2 2 0 0 1-2 2h-3v3a2 2 0 0 1-2 2H5l-5-5V10a2 2 0 0 1 2-2h6zm2 0h8l-4-4v4zM2 12v6l4 4h8v-6l-4-4H2z"/></symbol>
+    <symbol id="icon-share" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16a3 3 0 0 0-2.4 1.2l-6.2-3.1c.1-.3.1-.7 0-1l6.2-3.1A3 3 0 1 0 16 7a3 3 0 0 0 .2 1L10 11.1a3 3 0 1 0 0 1.8l6.2 3.1c-.1.3-.2.6-.2 1a3 3 0 1 0 2-1z"/></symbol>
+    <symbol id="icon-link" viewBox="0 0 24 24"><path fill="currentColor" d="M10.6 13.4a1 1 0 0 1 0-1.4l2-2a1 1 0 0 1 1.4 1.4l-2 2a1 1 0 0 1-1.4 0zM9 17a5 5 0 0 1 0-7.1l2.1-2.1a5 5 0 0 1 7.1 7.1l-1 1a1 1 0 1 1-1.4-1.4l1-1a3 3 0 1 0-4.2-4.2L11 10.3A3 3 0 0 0 9 17zm6 6a5 5 0 0 1-3.5-1.5 1 1 0 1 1 1.4-1.4A3 3 0 0 0 19 17a3 3 0 0 0-3-3 1 1 0 1 1 0-2 5 5 0 0 1 0 10z"/></symbol>
+  </svg>
+
+  <div class="gradient-bg"></div>
+
+  <main class="container">
+    <section class="card">
+      <div class="avatar-wrap">
+        <img id="avatar" alt="Avatar" />
+      </div>
+      <h1 id="displayName">Numele Tău</h1>
+      <div id="username" class="username">@username</div>
+      <p id="bio" class="bio">Bio scurt aici.</p>
+
+      <div id="badges" class="badges"></div>
+
+      <div class="actions">
+        <button id="shareBtn" class="btn btn-solid">
+          <svg class="btn-icon" width="18" height="18"><use href="#icon-share"/></svg>
+          <span>Share</span>
+        </button>
+        <button id="copyBtn" class="btn btn-ghost">
+          <svg class="btn-icon" width="18" height="18"><use href="#icon-copy"/></svg>
+          <span>Copiază link</span>
+        </button>
+      </div>
+
+      <div id="links" class="links"></div>
+    </section>
+
+    <footer class="footer">
+      <span>Făcut cu drag în mov</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
